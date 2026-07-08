@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_Net_Task</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.19.1" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Compile Remove="TaskManagement.Domain\**" />
+    <Content Remove="TaskManagement.Domain\**" />
+    <EmbeddedResource Remove="TaskManagement.Domain\**" />
+    <None Remove="TaskManagement.Domain\**" />
+    
+    <Compile Remove="TaskManagement.Application\**" />
+    <Content Remove="TaskManagement.Application\**" />
+    <EmbeddedResource Remove="TaskManagement.Application\**" />
+    <None Remove="TaskManagement.Application\**" />
+
+    <Compile Remove="TaskManagement.Infrastructure\**" />
+    <Content Remove="TaskManagement.Infrastructure\**" />
+    <EmbeddedResource Remove="TaskManagement.Infrastructure\**" />
+    <None Remove="TaskManagement.Infrastructure\**" />
+  </ItemGroup>
+
+</Project>
